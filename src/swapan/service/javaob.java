@@ -35,7 +35,7 @@ package swapan.service;
 				System.out.println("Response json from app direct server is - {} " +responseJson);
 				 createmain m = new createmain();
 		        m = new ObjectMapper().readValue(responseJson, createmain.class);
-		         System.out.println("check " + m.getFlag());
+		         System.out.println("check " + m.getAttribute());
 			} catch (Exception var3) {
 				System.out.println("Error fetching data from eventUrl - {} " +var3.getMessage());
 			}
