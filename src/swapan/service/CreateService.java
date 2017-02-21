@@ -1,18 +1,23 @@
 package swapan.service;
 
-   import java.io.BufferedReader;
-	import java.io.InputStreamReader;
-	import java.net.HttpURLConnection;
-	import java.net.URL;
+import swapan.dao.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-	import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
-	import oauth.signpost.basic.DefaultOAuthConsumer;
-    import swapan.main.createmain;
-    
-    
-	public class javaob {
-		public static String hitEventUrl(String eventUrl) {
+import oauth.signpost.basic.DefaultOAuthConsumer;
+import swapan.main.createmain;
+
+public class CreateService {
+
+		
+		
+		static CreateDao1 dao = new CreateDao1();
+
+	        public static String hitEventUrl(String eventUrl) {
 			String responseJson = "";
 			try {
 				DefaultOAuthConsumer e = new DefaultOAuthConsumer("swapan12345-152060", "gdrL1j76JtMGghX6");
@@ -41,6 +46,5 @@ package swapan.service;
 			}
 			return responseJson;
 		}
-	}
 
-
+}
