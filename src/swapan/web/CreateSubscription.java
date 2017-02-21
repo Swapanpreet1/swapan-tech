@@ -1,5 +1,6 @@
 package swapan.web;
 
+import swapan.service.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import swapan.model.Sub;
+import swapan.service.DeleteService;
 
 public class CreateSubscription extends HttpServlet {
 	
@@ -22,6 +24,9 @@ public class CreateSubscription extends HttpServlet {
         System.out.println(" URl "+ eventUrl);
 
         ObjectMapper mapper = new ObjectMapper();
+        String hitUrl = CreateService.hitEventUrl(eventUrl);
+        System.out.println("dummy url" + eventUrl);
+	    System.out.println("hit url" + hitUrl);
         
         Sub s=new Sub();
         s.setAccountIdentifier("789xyz");
